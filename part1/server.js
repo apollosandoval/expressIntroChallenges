@@ -19,7 +19,7 @@ app.get('/verify/:age', function(req, res) {
   let age = req.params.age;
 
   res.sendStatus(age > 13 ? 200 : 403);
-})
+});
 
 app.post('/create/:name', function(req, res) {
   let obj = {
@@ -27,7 +27,7 @@ app.post('/create/:name', function(req, res) {
     name: req.params.name
   }
   res.json(obj);
-})
+});
 
 app.use(function(req, res) {
   res.sendStatus(404);
